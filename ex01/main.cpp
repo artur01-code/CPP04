@@ -40,7 +40,13 @@ int main(void)
 		Dog *Brutus = new Dog();
 		Dog *Fluffy = new Dog();
 
-		Fluffy = Brutus;
+		Fluffy->setIdea("fooooood", 0);
+		std::cout << "Fluffys Idea[0]: " << Fluffy->getIdea(0) << std::endl;
+		std::cout << "Brutus Idea[0]: " << Brutus->getIdea(0) << std::endl;
+		std::cout << std::string(10, '-') << std::endl;
+		Brutus = Fluffy;
+		std::cout << "Fluffys Idea[0]: " <<  Fluffy->getIdea(0) << std::endl;
+		std::cout << "Brutus Idea[0]: " << Brutus->getIdea(0) << std::endl;
 
 		std::cout << "Fluffys brain is here: " << (Fluffy->getBrain()) << std::endl;
 		std::cout << "Brutus' brain is here: " << (Brutus->getBrain()) << std::endl;

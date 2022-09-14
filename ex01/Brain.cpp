@@ -31,7 +31,7 @@ void Brain::setIdea(const std::string& idea, int i)
 	this->_ideas[i] = idea;
 }
 
-std::string Brain::getIdea(int i)
+std::string Brain::getIdea(int i) const
 {
 	return (this->_ideas[i]);
 }

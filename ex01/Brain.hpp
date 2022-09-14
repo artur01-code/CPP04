@@ -16,7 +16,7 @@ class Brain
 
 	public:
 	void setIdea(const std::string& idea, int i);
-	std::string getIdea(int i);
+	std::string getIdea(int i) const;
 };
 
 #endif
