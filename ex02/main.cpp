@@ -22,7 +22,7 @@ int main(void)
 	std::cout << std::string(50, '-') << std::endl;
 	{
 		//uncomment for demonstrating that it is an abstract class
-		//AAnimal a = new AAnimal;
+		// AAnimal a = new AAnimal;
 	}
 	return (0);
 }
