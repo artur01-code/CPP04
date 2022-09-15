@@ -18,6 +18,8 @@ Cat& Cat::operator=(const Cat& rhs)
 {
 	std::cout << "Cat copy assigment operator" << std::endl;
 	this->_type = rhs._type;
+	delete this->_myBrain;
+	this->_myBrain = new Brain(*rhs._myBrain);
 	return (*this);
 }
 

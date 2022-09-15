@@ -24,6 +24,7 @@ Dog& Dog::operator=(const Dog& rhs)
 
 Dog::~Dog(void)
 {
+	delete _myBrain;
 	std::cout << "Dog default destructor" << std::endl;
 }
 

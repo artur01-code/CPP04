@@ -6,19 +6,19 @@
 
 int main(void)
 {
-	{
-		Dog fluffy;
-		fluffy.setIdea("Food", 0);
-		std::cout << "Idea[0]: " << fluffy.getIdea(0) << std::endl;
-	}
-	std::cout << std::string(50, '-') << std::endl;
-	{
-		Cat miez;
-		std::cout << "Idea[0]: " << miez.getIdea(0) << std::endl;
-		miez.setIdea("Food", 0);
-		std::cout << "Idea set" << std::endl;
-		std::cout << "Idea[0]: " << miez.getIdea(0) << std::endl;
-	}
+	// {
+	// 	Dog fluffy;
+	// 	fluffy.setIdea("Food", 0);
+	// 	std::cout << "Idea[0]: " << fluffy.getIdea(0) << std::endl;
+	// }
+	// std::cout << std::string(50, '-') << std::endl;
+	// {
+	// 	Cat miez;
+	// 	std::cout << "Idea[0]: " << miez.getIdea(0) << std::endl;
+	// 	miez.setIdea("Food", 0);
+	// 	std::cout << "Idea set" << std::endl;
+	// 	std::cout << "Idea[0]: " << miez.getIdea(0) << std::endl;
+	// }
 	std::cout << std::string(50, '-') << std::endl;
 	{
 		std::cout << "Animal array" << std::endl << std::endl;
@@ -44,12 +44,17 @@ int main(void)
 		std::cout << "Fluffys Idea[0]: " << Fluffy->getIdea(0) << std::endl;
 		std::cout << "Brutus Idea[0]: " << Brutus->getIdea(0) << std::endl;
 		std::cout << std::string(10, '-') << std::endl;
-		Brutus = Fluffy;
+		*Brutus = *Fluffy;
 		std::cout << "Fluffys Idea[0]: " <<  Fluffy->getIdea(0) << std::endl;
 		std::cout << "Brutus Idea[0]: " << Brutus->getIdea(0) << std::endl;
 
 		std::cout << "Fluffys brain is here: " << (Fluffy->getBrain()) << std::endl;
 		std::cout << "Brutus' brain is here: " << (Brutus->getBrain()) << std::endl;
+		printf("Brutus: %p\n", Brutus);
+		printf("Fluffy: %p\n", Fluffy);
+		// printf("Brutus: %p\n", Brutus);
+		delete Brutus;
+		delete Fluffy;
 	}
 	return (0);
 }
