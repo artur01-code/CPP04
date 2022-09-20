@@ -14,7 +14,7 @@ Ice::Ice(const Ice& rhs)
 
 Ice::~Ice(void)
 {
-	std::cout << "Ice default deconstructor" << std::endl;
+	std::cout << "Ice default destructor" << std::endl;
 };
 
 Ice& Ice::operator=(const Ice& rhs)

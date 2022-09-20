@@ -41,13 +41,16 @@ int main()
 		std::cout << std::string(50, '-') << std::endl;
 		victim.unequip(0);
 		victim.equip(&a);
-		std::cout << victim.getName() << " equipt " << a.getType() << std::endl;
+		victim.equip(&a);
+		victim.equip(&a);
+		victim.equip(&a);
 		std::cout << std::string(50, '-') << std::endl;
 		victim.use(0, d);
 		std::cout << std::string(50, '-') << std::endl;
 		victim.unequip(0);
-		std::cout << victim.getName() << " unequipt " << a.getType() << std::endl;
+		victim.unequip(1);
+		victim.unequip(2);
+		victim.unequip(3);
 		std::cout << std::string(50, '-') << std::endl;
 	}
-
 }

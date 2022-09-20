@@ -17,6 +17,10 @@ all:		${NAME}
 ${NAME}:
 			${CC} ${SRCS} ${FLAGS} -o ${NAME} 
 
+leaks:
+	make re
+	leaks --fullStacks --atExit -- ./${NAME}
+
 fclean:	
 			rm -f ${NAME}
 

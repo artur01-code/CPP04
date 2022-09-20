@@ -34,6 +34,13 @@ Character& Character::operator=(Character const &rhs)
 Character::~Character(void)
 {
 	std::cout << "Character default destructor" << std::endl;
+	int i = 0;
+	while (this->inventory[i] != NULL)
+	{
+		// this->trash[i]->~AMateria();
+		delete this->inventory[i];
+		i++;
+	}
 }
 
 std::string const & Character::getName() const
@@ -52,7 +59,10 @@ void Character::equip(AMateria* m)
 	while (i < 4 && this->inventory[i])
 		i++;
 	if (i < 4)
+	{
+		std::cout << this->getName() << " equipt " << m->getType() << std::endl;
 		this->inventory[i] = m;
+	}
 	else
 		std::cout << "cannot euqip, inventory full °-°" << std::endl;
 };
@@ -60,7 +70,10 @@ void Character::equip(AMateria* m)
 void Character::unequip(int idx)
 {
 	if (this->inventory[idx])
+	{
+		std::cout << this->getName() << " unequipt " << this->inventory[idx]->getType() << std::endl;
 		this->inventory[idx] = NULL;
+	}
 	else
 		std::cout << "Invalid index °-°" << std::endl;
 };

@@ -45,11 +45,11 @@ int main(void)
 	std::cout << std::string(50, '-') << std::endl;
 	{
 		WrongAnimal wrong;
-		WrongCat schroedinger;
+		WrongCat felix;
 		std::cout << wrong.getType() << std::endl;
 		wrong.makeSound();
-		std::cout << schroedinger.getType() << std::endl;
-		schroedinger.makeSound();
+		std::cout << felix.getType() << std::endl;
+		felix.makeSound();
 	}
 
 	return (0);
